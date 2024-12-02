@@ -1,0 +1,53 @@
+@host = http://localhost:3000
+@apiProducts = {{host}}/api/products
+@apiUsers = {{host}}/api/users
+
+GET {{apiProducts}}
+
+###
+GET {{apiProducts}}/671b89453c3445b535fd408d
+
+###
+GET {{apiProducts}}/price/2/100
+
+###
+GET {{apiProducts}}/actives
+###
+POST {{apiProducts}}
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjc0ZDgyNjI1Zjk1ZTI0ZDhiZTM4MDQ5IiwiaWF0IjoxNzMzMTM5NDE2fQ.oHPM6q-_IgVlNeT4iVUHX_qvC-wqlnp90PRPQTwph84
+
+{
+    "name": "walkman",
+    "description": "vuelve a los '80, se el más retromolon de tu casa",
+    "price": 23,
+    "department":"electronica",
+    "stock":30,
+    "available":true
+}
+
+###
+DELETE {{apiProducts}}/674d6f629d98956bf09ae3fc
+
+
+###
+POST {{apiUsers}}/register
+Content-Type: application/json
+
+{
+     "username": "manolito123",
+    "email": "manolitogafotas@gmail.com",
+    "password": "12345",
+    "role": "admin"
+}
+
+
+###
+POST {{apiUsers}}/login
+Content-Type: application/json
+
+{
+    "email": "manolitogafotas@gmail.com",
+    "password": "12345"
+}
+
