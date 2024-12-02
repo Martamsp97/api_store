@@ -1,4 +1,6 @@
-@host = http://localhost:3000
+//@host = http://localhost:3000
+
+@host = https://api-store-eiuk.onrender.com
 @apiProducts = {{host}}/api/products
 @apiUsers = {{host}}/api/users
 
@@ -15,14 +17,14 @@ GET {{apiProducts}}/actives
 ###
 POST {{apiProducts}}
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjc0ZDgyNjI1Zjk1ZTI0ZDhiZTM4MDQ5IiwiaWF0IjoxNzMzMTM5NDE2fQ.oHPM6q-_IgVlNeT4iVUHX_qvC-wqlnp90PRPQTwph84
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjc0ZGNhNGU0ZjJkNDU2NTJmZGFkYjlhIiwiaWF0IjoxNzMzMTUxNDM5fQ.18ppcmV-N8pwnttE0J2My7Mb8bilc1eR2fWkx8M-aHU
 
 {
-    "name": "walkman",
-    "description": "vuelve a los '80, se el más retromolon de tu casa",
-    "price": 23,
-    "department":"electronica",
-    "stock":30,
+    "name": "correa de perro",
+    "description": "5m de diversion",
+    "price": 10,
+    "department":"home",
+    "stock":130,
     "available":true
 }
 
@@ -35,10 +37,10 @@ POST {{apiUsers}}/register
 Content-Type: application/json
 
 {
-     "username": "manolito123",
-    "email": "manolitogafotas@gmail.com",
-    "password": "12345",
-    "role": "admin"
+     "username": "chenoita",
+    "email": "chenoa2001@gmail.com",
+    "password": "123456",
+    "role": "regular"
 }
 
 
@@ -47,7 +49,11 @@ POST {{apiUsers}}/login
 Content-Type: application/json
 
 {
-    "email": "manolitogafotas@gmail.com",
-    "password": "12345"
+    "email": "chenoa2001@gmail.com",
+    "password": "123456"
 }
+
+###
+PUT {{apiUsers}}/add-product/
+Authorization: : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjc0ZGNhNGU0ZjJkNDU2NTJmZGFkYjlhIiwiaWF0IjoxNzMzMTUxNDM5fQ.18ppcmV-N8pwnttE0J2My7Mb8bilc1eR2fWkx8M-aHU
 
